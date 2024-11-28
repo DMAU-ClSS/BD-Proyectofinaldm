@@ -1,0 +1,41 @@
+{
+	"name": "Copy_input_to_capabronce",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Datafactory_ADLSGen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"nombarchivo": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().nombarchivo",
+					"type": "Expression"
+				},
+				"folderPath": "proyectofinal/input",
+				"fileSystem": "dmautinocertus"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Cod_Categoria",
+				"type": "String"
+			},
+			{
+				"name": "Nombre",
+				"type": "String"
+			}
+		]
+	}
+}
