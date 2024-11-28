@@ -1,0 +1,9 @@
+{
+	"name": "dcertus-datafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0fd553f7-f09c-47bd-a8e3-6a66e365647e",
+		"tenantId": "86ed4e3d-47d6-4920-a5f0-0883e88906f2"
+	}
+}
